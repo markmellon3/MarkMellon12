@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Primary SEO -->
+    <title>MarkMellon | Premium Portfolio & SMMMARIA Visual Assets</title>
+    <meta name="description" content="Official MarkMellon portfolio. Browse high-quality images, digital marketing assets, and SMMMARIA panel interface designs. View projects and contact for collaborations.">
+    <meta name="keywords" content="MarkMellon, MarkMellon1, SMMMARIA, SMMMARIA Panel, MarkMellon portfolio, SMM panel images, digital marketing assets, premium image gallery, web developer portfolio">
+    <meta name="author" content="MarkMellon">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://markmellon.com">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MarkMellon">
+    <meta property="og:title" content="MarkMellon | Premium Portfolio & SMMMARIA Assets">
+    <meta property="og:description" content="Explore high-quality images, digital marketing visuals, and projects by MarkMellon1.">
+    <meta property="og:url" content="https://markmellon.com">
+    <meta property="og:image" content="https://markmellon.com/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "MarkMellon",
+        "alternateName": "MarkMellon1",
+        "url": "https://markmellon.com",
+        "jobTitle": "Digital Designer & Developer",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "SMMMARIA",
+            "url": "https://smmaria.site"
+        }
+    }
+    </script>
+
+    <!-- Dynamic Image Schema (injected by JS) -->
+    <script id="image-schema" type="application/ld+json">{}</script>
+    <!-- Dynamic Breadcrumb Schema (injected by JS) -->
+    <script id="breadcrumb-schema" type="application/ld+json">{}</script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <a href="#home" class="logo" aria-label="MarkMellon Home">
+                <span class="logo-text">MarkMellon</span>
+            </a>
+            <nav class="header-nav" aria-label="Main navigation">
+                <a href="#home" class="nav-link active" data-route="home">Home</a>
+                <a href="#projects" class="nav-link" data-route="projects">Projects</a>
+                <a href="#gallery" class="nav-link" data-route="gallery">Gallery</a>
+                <a href="#about" class="nav-link" data-route="about">About</a>
+                <a href="#contact" class="nav-link" data-route="contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-nav-link active">Home</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#gallery" class="mobile-nav-link">Gallery</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <!-- Main App Container (Pages render here) -->
+    <main id="app" class="app-container"></main>
+
+    <!-- Lightbox (Global) -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer" aria-hidden="true">
+        <div class="lightbox-backdrop"></div>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close viewer">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-body">
+            <div class="lightbox-image-wrap" id="lightboxImageWrap">
+                <img src="" alt="" class="lightbox-image" id="lightboxImage" draggable="false">
+            </div>
+            <div class="lightbox-info" id="lightboxInfo">
+                <h2 class="lightbox-title" id="lightboxTitle"></h2>
+                <p class="lightbox-desc" id="lightboxDesc"></p>
+                <span class="lightbox-category" id="lightboxCategory"></span>
+                <div class="lightbox-actions">
+                    <button class="lightbox-action-btn" id="lightboxZoom" aria-label="Zoom image">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Zoom</span>
+                    </button>
+                    <button class="lightbox-action-btn" id="lightboxShare" aria-label="Share image">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Share</span>
+                    </button>
+                    <button class="lightbox-action-btn" id="lightboxDownload" aria-label="Download image">
+                        <i class="fas fa-download"></i>
+                        <span>Download</span>
+                    </button>
+                </div>
+                <!-- Related Images -->
+                <div class="lightbox-related" id="lightboxRelated">
+                    <h3>Related Images</h3>
+                    <div class="related-grid" id="relatedGrid"></div>
+                </div>
+            </div>
+        </div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="share-modal" id="shareModal" role="dialog" aria-label="Share image" aria-hidden="true">
+        <div class="share-modal-backdrop"></div>
+        <div class="share-modal-content">
+            <div class="share-modal-header">
+                <h3>Share This Image</h3>
+                <button class="icon-btn" id="shareModalClose" aria-label="Close share">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="share-buttons" id="shareButtons">
+                <button class="share-btn share-fb" data-platform="facebook" aria-label="Share on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </button>
+                <button class="share-btn share-wa" data-platform="whatsapp" aria-label="Share on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </button>
+                <button class="share-btn share-tg" data-platform="telegram" aria-label="Share on Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                    <span>Telegram</span>
+                </button>
+                <button class="share-btn share-x" data-platform="x" aria-label="Share on X">
+                    <i class="fab fa-x-twitter"></i>
+                    <span>X</span>
+                </button>
+                <button class="share-btn share-li" data-platform="linkedin" aria-label="Share on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </button>
+                <button class="share-btn share-ig" data-platform="instagram" aria-label="Share on Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </button>
+                <button class="share-btn share-copy" data-platform="copy" aria-label="Copy link">
+                    <i class="fas fa-link"></i>
+                    <span>Copy Link</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" aria-live="polite"></div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-text">MarkMellon</span>
+                <p>Premium portfolio & digital assets.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://smmaria.site" target="_blank">SMMMARIA</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 MarkMellon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to MarkMellon...</title>
+    
+    <!-- Fallback Meta Redirect (in case JavaScript is disabled) -->
+    <meta http-equiv="refresh" content="3; url=https://markmellon.site">
+    
+    <!-- SEO Canonical Tag -->
+    <link rel="canonical" href="https://markmellon.site">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Instant JavaScript Redirect -->
+    <script>
+        // Redirect after 1.5 seconds so they can see the card
+        setTimeout(function() {
+            window.location.replace("https://markmellon.site");
+        }, 1500);
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Background subtle light glow effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(110, 168, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .redirect-card {
+            position: relative;
+            z-index: 10;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 50px 40px;
+            border-radius: 0; /* Removed circular edges */
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            max-width: 420px;
+            width: 90%;
+            animation: slideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo-mark {
+            width: 64px;
+            height: 64px;
+            background: #0f172a;
+            border-radius: 0; /* Removed circular edges */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0 auto 24px;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
+        }
+
+        .redirect-card h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+            color: #0f172a;
+        }
+
+        .redirect-card p {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .loader-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+
+        .loader {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #e2e8f0;
+            border-radius: 50%;
+            border-top-color: #0f172a;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .btn-fallback {
+            display: inline-block;
+            padding: 12px 28px;
+            background: transparent;
+            border: 1px solid #0f172a;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 0; /* Removed circular edges */
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-fallback:hover {
+            background: #0f172a;
+            color: #ffffff;
+            border-color: #0f172a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="redirect-card">
+        <div class="logo-mark">MM</div>
+        <h1>Redirecting</h1>
+        <p>You are being securely redirected to the main MarkMellon website. Please wait a moment...</p>
+        
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+        </div>
+        
+        <a href="https://markmellon.site" class="btn-fallback">Click here if you are not redirected</a>
+    </div>
+
+    <!-- JavaScript Redirect Logic -->
+    <script>
+        // Ensure the redirect happens reliably after 1.5 seconds
+        window.setTimeout(function() {
+            // Using window.location.replace ensures the user can't use the "Back" button to return to this redirect page
+            window.location.replace("https://markmellon.site");
+        }, 1500);
+    </script>
+
+</body>
+</html>
